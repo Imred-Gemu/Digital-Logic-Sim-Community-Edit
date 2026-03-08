@@ -28,12 +28,6 @@ namespace DLS.SaveSystem
             // If somehow the chip was saved as cacheable when it shouldn't be, correct that.
             if (!appropriatelySizedIO)
             {
-                description.CanBeCached = false;
-            }
-
-            // If a chip that can't be cached was saved as should be cached, correct that.
-            if (!description.CanBeCached)
-            {
                 description.ShouldBeCached = false;
             }
 
